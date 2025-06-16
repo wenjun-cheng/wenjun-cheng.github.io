@@ -11,14 +11,19 @@ main:
   - title: "Research Experience"
     url: /#research
 
+  - title: "Internship Experience"
+    url: /#internship
+
   - title: "Teaching Experience"
     url: /#teaching    
 
   - title: "Awards"
     url: /#awards
-    
-  - title: "Skills"
+      - title: "Skills"
     url: /#skills
+
+  - title: "Additional Experience"
+    url: /#additional
 
   # Commented out unused pages
   # - title: "Publications"
