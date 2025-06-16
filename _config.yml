@@ -21,10 +21,11 @@ repository               : "wjchengx/wjchengx.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:  # Biographic information
-  avatar           : "my_photo.jpg"  # 改成你的图片文件名
-  name             : "Wenjun Cheng"
+  avatar           : "my_photo.jpg"  # 改成你的图片文件名  name             : "Wenjun Cheng"
   pronouns         : # example: "she/her"  
-  bio              : "Undergraduate @SJTU @Umich"
+  bio              : |
+    Undergraduate
+    @SJTU @Umich
   location         : "Shanghai"
   email            : "wjchengx@umich.edu" 
 
