@@ -9,11 +9,11 @@ redirect_from:
 
 Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electronic and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. 
 
-## Education {#education}
+## 🎓 Education {#education}
 * B.S. in Electronic and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027 (expected)
 
-## Research {#research}
+## 🔬 Research {#research}
 ### April 2024 - June 2025: Machine Learning-based Study of Droplet Collision Behavior
 * **Supervised by Professor David Hung at Shanghai Jiao Tong University**
 * This research investigates the effects of varying impact angles, impact velocities, and droplet sizes on collision forces and droplet morphology through experimental analysis. The project involves setting up specialized experimental rigs and conducting comprehensive image and data processing tasks. By leveraging machine learning algorithms, I aim to enable predictive modeling of collision dynamics and morphological changes within specific parameter ranges. 
@@ -29,12 +29,12 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * My initial foray into scientific research delved into the realms of large-area structural super-slippery surfaces (2021) and the structural design of Martian drones (2023). The works were met with recognition from multiple professors, earning awards such as "Most Valuable Research Award". 
 * This experience introduced me to rigorous scientific methodology and interdisciplinary research approaches, enhancing my collaboration skills and ability to communicate technical concepts effectively to diverse audiences.
 
-## Internship {#internship}
+## 💼 Internship {#internship}
 ### January 2025 - February 2025: Research Intern
 * **Algorithm Group, Research & Development System, Edan Instruments, Inc.**
 * I led the exploratory electrocardiographic diagnosis result 3D visualization work and participated in exploring electrocardiographic diagnosis algorithms. The visualization system I developed demonstrated significant potential, leading to management approval for system optimization and planned integration into the company's medical equipment.
 
-## Teaching {#teaching}
+## 📋 Teaching {#teaching}
 ### Fall 2024: Tech TA for Introduction to Engineering
 * **UM-SJTU Joint Institute, Shanghai Jiao Tong University**
 * Duties:
@@ -57,7 +57,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
   - Provided extensive feedback to professor on course management and student progress
 * **Recognition:** Received bonus for exceptional performance
 
-## Awards {#awards}
+## 🏆 Awards {#awards}
 ### Research Awards
 * **Qian Xuesen Mechanics Class & Shenzhen Zero One College Summer School (2021-2023)**
   - "The Red Cliff Plan: Large-Area Structural Super-Slip"(2021): "Most Valuable Research Award", "Best Team Award", and "Best Research Method Award"
@@ -69,7 +69,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * **Yu Liming Scholarship**
 
 
-## Additional {#additional}
+## ⭐ Additional {#additional}
 ### Academic Visit Program
 * Participated in institutional visits organized by Shenzhen Zero One College, including the National Protein Science Center (Beijing) and China Astronaut Research and Training Center
 * Gaining exposure to cutting-edge research facilities and aerospace training programs
