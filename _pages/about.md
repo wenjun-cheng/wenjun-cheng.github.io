@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electronic and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics, with a focus on autonomous systems and intelligent perception. 
+Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electronic and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. 
 
 ## Education {#education}
 * B.S. in Electronic and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
@@ -61,7 +61,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 ### Research Awards
 * **Qian Xuesen Mechanics Class & Shenzhen Zero One College Summer School (2021-2023)**
   - "The Red Cliff Plan: Large-Area Structural Super-Slip"(2021): "Most Valuable Research Award", "Best Team Award", and "Best Research Method Award"
-  - "Dragonfly: Three-Stage Mars UAV Structural Design"(2023):"Best Design Award"
+  - "Dragonfly: Three-Stage Mars UAV Structural Design"(2023): "Best Design Award"
 
 ### Scholarships
 * **Huatai Securities Science and Technology Scholarship**

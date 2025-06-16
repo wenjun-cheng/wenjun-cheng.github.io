@@ -8,17 +8,17 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Research Experience"
+  - title: "Research"
     url: /#research
 
-  - title: "Internship Experience"
+  - title: "Internship"
     url: /#internship
-  - title: "Teaching Experience"
+  - title: "Teaching"
     url: /#teaching    
   - title: "Awards"
     url: /#awards
     
-  - title: "Additional Experience"
+  - title: "Additional"
     url: /#additional
 
   # Commented out unused pages
