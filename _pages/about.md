@@ -1,49 +1,88 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Wenjun Cheng"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am an undergraduate student pursuing dual degrees in Electronic and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie in machine learning, computer vision, and robotics, with hands-on experience in experimental setup and algorithm development.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## Education {#education}
+* B.S. in Electronic and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
+* B.S. in Robotics Engineering, University of Michigan, 2023-2027 (expected)
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+## Research Experience {#research}
+### 2021-2023: Summer Research Programs
+* **Tsinghua University Qian Xuesen Mechanics Class and Shenzhen Zero One College Summer School**
+* My initial foray into scientific research delved into the realms of large-area structural super-slippery surfaces (2021) and the structural design of Martian drones (2023). The works were met with recognition from multiple professors, earning awards such as "Most Valuable Research Award."
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+### January 2025 - February 2025: Algorithm Research Intern
+* **Tsinghua University Shenzhen Graduate School**
+* During a two-month internship, I immersed myself in the study of edge computing and active perception by reading extensive literature and participating in the development and testing of UAV algorithms within a team setting.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+### Current: Machine Learning Research
+* **Under Professor David Hung**
+* Currently engaged in a research project focusing on "Machine Learning-based Study of Droplet/Spray Collision Behavior." This involves setting up an experimental rig and conducting image and data processing tasks, which have significantly enhanced my hands-on ability, proficiency in SolidWorks and Python for data and image analysis.
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+## Internship Experience {#internship}
+### January 2025 - February 2025: Algorithm Research Intern
+* **Research & Development System, Edan Instruments, Inc.**
+* I led the electrocardio diagnosis result 3D visualization work and participated in exploring electrocardio diagnosis algorithm.
 
-**Markdown generator**
+## Teaching Experience {#teaching}
+### Fall 2024: Tech TA for Introduction to Engineering
+* **UM-SJTU Joint Institute, Shanghai Jiao Tong University**
+* Duties:
+  - Guided freshmen through fundamental engineering concepts and workflow
+  - Taught basic programming in C++, SolidWorks skills, and Arduino development
+  - Shared insights into research methodologies and project management
+  - Designed and set up tracks for student projects
+  - Graded homework assignments and provided constructive feedback
+  - Collaborated with professors to organize end-of-semester symposium
+  - Evaluated student project demonstrations and compiled final scores
+  - Provided extensive feedback to professors on course management
+* **Recognition:** Received bonus for exceptional performance and nominated for Annual Outstanding TA award
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+### Spring 2025: TA for Political Philosophy
+* **UM-SJTU Joint Institute, Shanghai Jiao Tong University**
+* Duties included:
+  - Assisted new professor with online learning platform setup
+  - Proctored examinations
+  - Facilitated communication between professor, students, and the Education Office
+  - Provided extensive feedback to professor on course management and student progress
+* **Recognition:** Received bonus for exceptional performance
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+## Awards and Certificates {#awards}
+### Research Awards
+* Most Scientific Research Value Award, Best Team Award and Best Research Method Award for the research project "Structural Super-Slip: The Red Cliff Plan" at the Qian Xuesen Mechanics Class of Tsinghua University and Shenzhen Zero One College Summer School
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+### Scholarships
+* Huatai Securities Science and Technology Scholarship
+* Yu Liming Scholarship
+* Shanghai Jiao Tong University Excellence Scholarship
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+## Skills {#skills}
+* **Programming Languages:** C++, Python
+* **Software:** SolidWorks
+* **Research:** Machine Learning, Data Analysis, Image Processing
+* **Laboratory Skills:** Experimental Setup
+* **Languages:** English (Proficient), Chinese (Native)
+
+## Additional Experience {#additional}
+### Musical Achievements
+* ABRSM Piano Performance Level 8 certificate
+* Central Conservatory of Music Clarinet Performance Level 9 certificate
+
+### Leadership Roles
+* **Founding President of JI Tennis Club**
+  - Organized elections and drafted club bylaws and development plans
+  - Organized online and offline viewing events for club members
+  - Collaborated with club members to write a beginner's guide under the guidance of school tennis teachers
+  - Assessed member skill levels and facilitated skill development
+
+### Professional Service
+* **Staff Member at "X-Innovators Think Tank" Meeting**
+  - Guided guests at the meeting held at Shenzhen Talent Institute
+  - Assisted notable figures including Academicians Gao Wen and Gao Huajian
