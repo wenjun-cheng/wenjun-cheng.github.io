@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electrical and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. You can download my resume <a href="/files/cv.pdf" download>here</a> 📄.
+Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electrical and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. You can download my resume <a href="/files/cv.pdf" download>here</a>.
 
 ## 🎓 Education {#education}
 * B.S. in Electrical and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
@@ -64,15 +64,15 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
   - "Dragonfly: Three-Stage Mars UAV Structural Design"(2023): "Best Design Award"
 
 ### Scholarships
-* **Huatai Securities Science and Technology Scholarship**
+* **Shanghai Jiao Tong University Huatai Securities Science and Technology Scholarship**
 * **Shanghai Jiao Tong University Excellence Scholarship**
-* **Yu Liming Scholarship**
+* **UM-SJTU Joint Institute Yu Liming Scholarship**
 
 
 ## ⭐ Additional {#additional}
-### Academic Visit Program
-* Participated in institutional visits organized by Shenzhen Zero One College, including the National Protein Science Center (Beijing) and China Astronaut Research and Training Center
-* Gaining exposure to cutting-edge research facilities and aerospace training programs
+### Academic Activities
+* Participated in institutional visits organized by Shenzhen Zero One College, including the National Protein Science Center (Beijing) and China Astronaut Research and Training Center, gaining exposure to cutting-edge research facilities and aerospace training programs
+* Invited as Student Representative for Roundtable Discussion with Academician Quan-Shui Zheng at Shanghai Jiao Tong University Master Forum
 
 ### Professional Service
 * **Staff Member at "X-Innovators Think Tank" Meeting**
@@ -82,7 +82,6 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 ### Leadership Roles
 * **Founding President of JI Tennis Club**
   - Organized elections and drafted club bylaws and development plans
-  - Organized online and offline viewing events for club members
   - Organized trainings
   - Organized institute team to participate in competitions
   - Collaborated to write a beginner's guide
