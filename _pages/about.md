@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electronic and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. 
+Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electrical and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. You can download my resume <a href="/files/cv.pdf" download>here</a> 📄.
 
 ## 🎓 Education {#education}
-* B.S. in Electronic and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
+* B.S. in Electrical and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (expected)
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027 (expected)
 
 ## 🔬 Research {#research}
