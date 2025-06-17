@@ -77,7 +77,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 ### Professional Service
 * **Staff Member at "X-Innovators Think Tank" Meeting**
   - Guided guests at the meeting held at Shenzhen Talent Institute
-  - Assisted notable figures including Academicians Gao Wen and Gao Huajian
+  - Assisted notable figures including Academicians Wen Gao and Huajian Gao
 
 ### Leadership Roles
 * **Founding President of JI Tennis Club**

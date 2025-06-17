@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Homepage"
+title                    : "Wenjun Cheng"
 title_separator          : "-"
 name                     : &name "Wenjun Cheng"
 description              : &description "description"
