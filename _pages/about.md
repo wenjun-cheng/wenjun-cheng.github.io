@@ -14,7 +14,13 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027
 
 ## 🔬 Research {#research}
-### April 2024 - June 2025: Machine Learning-based Study of Droplet Collision Behavior
+### April 2024 - Present: DAG-based Framework for Complex Dialogue and Swarm Robotics Collaboration
+* **Independent Research Project**
+* Developing a novel Directed Acyclic Graph (DAG) based framework to address challenges in Large Language Model (LLM) dialogue management and multi-robot task coordination
+* The framework enables flexible conversation branching/merging for LLMs and distributed task management for robot swarms with metacognitive capabilities
+* Combines natural language processing, graph theory, and multi-agent systems to improve dialogue coherence and robotic collaboration efficiency
+
+### April 2024 - Present: Machine Learning-based Study of Droplet Collision Behavior
 * **Supervised by Professor David Hung at Shanghai Jiao Tong University**
 * This research investigates the effects of varying impact angles, impact velocities, and droplet sizes on collision forces and droplet morphology through experimental analysis. The project involves setting up specialized experimental rigs and conducting comprehensive image and data processing tasks. By leveraging machine learning algorithms, I aim to enable predictive modeling of collision dynamics and morphological changes within specific parameter ranges. 
 * This work has significantly enhanced my hands-on experimental abilities and proficiency in SolidWorks for equipment design and programming skills for advanced data and image analysis.
