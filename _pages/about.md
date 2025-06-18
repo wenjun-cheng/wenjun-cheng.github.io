@@ -14,7 +14,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027
 
 ## 🔬 Research {#research}
-### April 2024 - Present: DAG-based Framework for Complex Dialogue and Swarm Robotics Collaboration
+### April 2025 - Present: DAG-based Framework for Complex Dialogue and Swarm Robotics Collaboration
 * **Independent Research Project**
 * Developing a novel Directed Acyclic Graph (DAG) based framework to address challenges in Large Language Model (LLM) dialogue management and multi-robot task coordination
 * The framework enables flexible conversation branching/merging for LLMs and distributed task management for robot swarms with metacognitive capabilities
