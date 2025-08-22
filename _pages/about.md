@@ -11,7 +11,7 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 
 ## 🎓 Education {#education}
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027
-* B.S. in Electrical and Computer Engineering, Shanghai Jiao Tong University, 2023-2027
+* B.S. in Electrical and Computer Engineering, Shanghai Jiao Tong University, 2023-2027 (GPA: 3.65/4.0)
 
 
 ## 🔬 Research {#research}
