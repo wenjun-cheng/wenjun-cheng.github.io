@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electrical and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics. You can download my resume <a href="/files/cv.pdf" download>here</a>.
+Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in Electrical and Computer Engineering at Shanghai Jiao Tong University and Robotics Engineering at University of Michigan. My research interests lie at the intersection of AI and robotics.
 
 ## 🎓 Education {#education}
 * B.S. in Robotics Engineering, University of Michigan, 2023-2027
@@ -15,11 +15,11 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 
 
 ## 🔬 Research {#research}
-### April 2025 - Present: DAG-based Framework for Complex Dialogue and Swarm Robotics Collaboration
+### April 2025 - Present: DAG-Based Framework for LLM Workflow Management
 * **Independent Research Project**
-* Developing a novel Directed Acyclic Graph (DAG) based framework to solve LLM dialogue management bottlenecks and multi-robot coordination challenges
-* Designing flexible conversation branching/merging functions for LLMs and distributed task management for robot swarms with metacognitive capabilities
-* Integrating natural language processing, graph theory, and multi-agent systems to improve dialogue coherence and and robotic collaboration efficiency
+* Building a DAG-structured framework that unifies interaction, memory, reasoning, and execution into branchable and replayable workflows
+* Developing tools for transparent reasoning, collaborative workflows, and multi-agent coordination
+* Exploring parallel execution, swarm robotics applications, and mechanisms for long-term autonomy
 
 ### April 2024 - Present: Machine Learning-based Study of Droplet Collision Behavior
 * **Supervised by [Professor David Hung](https://www.researchgate.net/profile/David-Hung-8) at Shanghai Jiao Tong University**
