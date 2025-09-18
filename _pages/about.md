@@ -15,11 +15,10 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 
 
 ## 🔬 Research {#research}
-### April 2025 - Present: DAG-Based Framework for LLM Workflow Management
-* **Independent Research Project**
-* Building a DAG-structured framework that unifies interaction, memory, reasoning, and execution into branchable and replayable workflows
-* Developing tools for transparent reasoning, collaborative workflows, and multi-agent coordination
-* Exploring parallel execution, swarm robotics applications, and mechanisms for long-term autonomy
+### September 2025 - Present: Passive, Selective Memory Augmentation for LLMs via GoT Activation
+* **Supervised by [Professor Maani Ghaffari](https://name.engin.umich.edu/people/ghaffari-maani/) at University of Michigan**
+* Designing and implementing a novel, passive memory augmentation mechanism for Large Language Models (LLMs), leveraging structured reasoning processes (Graph-of-Thought) to dynamically and selectively strengthen memory.
+* Developing a real-time weight-updating algorithm to enhance the salience of memory units from various sources based on their activation within the LLM's internal thought process.
 
 ### April 2024 - Present: Machine Learning-based Study of Droplet Collision Behavior
 * **Supervised by [Professor David Hung](https://www.researchgate.net/profile/David-Hung-8) at Shanghai Jiao Tong University**
@@ -34,24 +33,6 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * Collaborated with research team to develop and test UAV path planning algorithms
 * Focused on developing strategies for UAVs to optimize the balance between predetermined flight paths and active environmental data collection
 * Enhanced research methodology skills through formal idea development and technical communication with team members
-
-### 2021-2023: Summer Research Programs
-* **Tsinghua University Qian Xuesen Mechanics Class and Shenzhen Zero One College Summer School**
-
-* **Dragonfly: Three-Stage Mars UAV Structural Design (2023)**
-  * **Supervised by [Professor Jun Yang](http://www.ultraxlab.com/en/?merber/202204215294.html)**  
-  * Conducted comprehensive literature review to inform design decisions and ensure alignment with current research frontiers
-  * Applied machine learning to optimize wing shapes and aerodynamic structures, enhancing flight efficiency  
-  * Developed 3D design prototypes and utilized computational fluid dynamics (CFD) simulations to assess and refine aerodynamic feasibility
-  * Designed structural components for Martian drone systems, focusing on lightweight and robust architecture for extreme environments 
-
-* **The Red Cliff Plan: Large-Area Structural Super-Slip (2021)** 
-  * **Supervised by [Professor Quanshui Zheng](https://www.researchgate.net/profile/Quan-Shui-Zheng)**
-  * Conducted in-depth literature review and technical study on the principles of structural super-slippery surfaces, learning advanced microfabrication techniques such as photolithography and ion sputtering deposition
-  * Proposed scalable solutions to extend the super-slippery phenomenon from nanometer to micron levels and initiated prototype development based on the proposal
-
-* Recognized by multiple professors for research excellence, receiving the "Most Valuable Research Award" and other honors for innovative solutions
-* Developed rigorous scientific methodology and interdisciplinary collaboration skills through intensive research programs, enhancing ability to communicate complex technical concepts to diverse audiences
 
 ## 💼 Internship {#internship}
 ### January 2025 - February 2025: Research Intern
@@ -77,6 +58,30 @@ Hi! This is Wenjun Cheng. I am an undergraduate student pursuing dual degrees in
 * Provided feedbacks to professor on course management and student progress trends, contributing to improved pedagogical approaches
 * Proctored examinations with strict adherence to academic integrity protocols
 * **Recognition:** Received performance bonus
+
+## 🚀 Projects {#projects}
+### July 2025 - Present: Full-Stack Marketplace Web Application
+* **Team Leader, Independent Project**
+* Led the end-to-end development of a full-stack marketplace web application for UM-SJTU Joint Institute, from system architecture to production deployment.
+* Architected and implemented core features including secure user authentication, item listings, advanced filtering and search, and an original “Items List” section enabling sellers to group items and auto-generate promotional posters.
+
+### 2021-2023: Summer Research Programs
+* **Tsinghua University Qian Xuesen Mechanics Class and Shenzhen Zero One College Summer School**
+
+* **Dragonfly: Three-Stage Mars UAV Structural Design (2023)**
+  * **Supervised by [Professor Jun Yang](http://www.ultraxlab.com/en/?merber/202204215294.html)**  
+  * Conducted comprehensive literature review to inform design decisions and ensure alignment with current research frontiers
+  * Applied machine learning to optimize wing shapes and aerodynamic structures, enhancing flight efficiency  
+  * Developed 3D design prototypes and utilized computational fluid dynamics (CFD) simulations to assess and refine aerodynamic feasibility
+  * Designed structural components for Martian drone systems, focusing on lightweight and robust architecture for extreme environments 
+
+* **The Red Cliff Plan: Large-Area Structural Super-Slip (2021)** 
+  * **Supervised by [Professor Quanshui Zheng](https://www.researchgate.net/profile/Quan-Shui-Zheng)**
+  * Conducted in-depth literature review and technical study on the principles of structural super-slippery surfaces, learning advanced microfabrication techniques such as photolithography and ion sputtering deposition
+  * Proposed scalable solutions to extend the super-slippery phenomenon from nanometer to micron levels and initiated prototype development based on the proposal
+
+* Recognized by multiple professors for research excellence, receiving the "Most Valuable Research Award" and other honors for innovative solutions
+* Developed rigorous scientific methodology and interdisciplinary collaboration skills through intensive research programs, enhancing ability to communicate complex technical concepts to diverse audiences
 
 ## 🏆 Awards {#awards}
 ### Research Awards

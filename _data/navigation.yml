@@ -14,7 +14,9 @@ main:
   - title: "Internship"
     url: /#internship
   - title: "Teaching"
-    url: /#teaching    
+    url: /#teaching
+  - title: "Projects"
+    url: /#projects    
   - title: "Awards"
     url: /#awards
     
