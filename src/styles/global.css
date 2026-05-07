@@ -1,0 +1,93 @@
+@import "@fontsource-variable/inter";
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap");
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-paper: #c0bab0;
+  --color-ink-soft: rgba(26, 20, 16, 0.22);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-paper);
+  font-family: "Inter Variable", "PingFang SC", "Hiragino Sans GB", ui-sans-serif, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+@keyframes walkBob {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 5px; }
+}
+
+@keyframes inkVortexOpen {
+  0%   { opacity: 0;    transform: translate(-50%, -50%) scale(0.14) rotate(-16deg); }
+  42%  { opacity: 0.72; transform: translate(-50%, -50%) scale(0.82) rotate(18deg);  }
+  100% { opacity: 0;    transform: translate(-50%, -50%) scale(1.18) rotate(42deg);  }
+}
+
+@keyframes inkWash {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+  45%  { opacity: 1; transform: translate(-50%, -50%) scale(0.92); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.35); }
+}
+
+@keyframes inkVortexClose {
+  0%   { opacity: 0;    transform: translate(-50%, -50%) scale(1.22) rotate(42deg);  }
+  38%  { opacity: 0.78; transform: translate(-50%, -50%) scale(0.86) rotate(4deg);   }
+  100% { opacity: 0;    transform: translate(-50%, -50%) scale(0.18) rotate(-22deg); }
+}
+
+@keyframes inkWashClose {
+  0%   { opacity: 0;    transform: translate(-50%, -50%) scale(1.16); }
+  42%  { opacity: 0.72; transform: translate(-50%, -50%) scale(0.76); }
+  100% { opacity: 0;    transform: translate(-50%, -50%) scale(0.18); }
+}
+
+@keyframes scrollUnfurl {
+  0%   { opacity: 0; transform: scaleY(0.04); clip-path: inset(49% 0 49% 0); filter: blur(0.8px); }
+  48%  { opacity: 1; transform: scaleY(1.04); clip-path: inset(3% 0 3% 0); filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scaleY(1); clip-path: inset(0 0 0 0); filter: blur(0); }
+}
+
+@keyframes scrollIntoInk {
+  0%   { opacity: 1; transform: scaleY(1);    clip-path: inset(0 0 0 0);       filter: blur(0); }
+  58%  { opacity: 0.9; transform: scaleY(0.28); clip-path: inset(33% 0 33% 0);   filter: blur(0.35px); }
+  100% { opacity: 0; transform: scaleY(0.035); clip-path: inset(49% 0 49% 0);    filter: blur(1.8px); }
+}
+
+@keyframes scrollRodTopOpen {
+  0%   { top: 50%; transform: translateY(-50%); }
+  100% { top: 1.1rem; transform: translateY(0); }
+}
+
+@keyframes scrollRodBottomOpen {
+  0%   { bottom: 50%; transform: translateY(50%); }
+  100% { bottom: 1.1rem; transform: translateY(0); }
+}
+
+@keyframes scrollRodTopClose {
+  0%   { top: 1.1rem; transform: translateY(0); }
+  100% { top: 50%; transform: translateY(-50%); }
+}
+
+@keyframes scrollRodBottomClose {
+  0%   { bottom: 1.1rem; transform: translateY(0); }
+  100% { bottom: 50%; transform: translateY(50%); }
+}
+
+/* Thin ink scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-ink-soft); border-radius: 2px; }
