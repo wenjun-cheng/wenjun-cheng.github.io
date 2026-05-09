@@ -448,10 +448,14 @@ const styles: Record<string, CSSProperties> = {
   scrollSheetOpening: {
     transformOrigin: "50% 50%",
     animation: ANIM_OPEN_SHEET,
+    willChange: "transform, opacity",
+    backfaceVisibility: "hidden",
   },
   scrollSheetClosing: {
     transformOrigin: "50% 50%",
     animation: ANIM_CLOSE_SHEET,
+    willChange: "transform, opacity",
+    backfaceVisibility: "hidden",
   },
   scrollInner: {
     position: "relative",
@@ -501,9 +505,11 @@ const styles: Record<string, CSSProperties> = {
   },
   scrollRodTopOpening: {
     animation: ANIM_OPEN_ROD_TOP,
+    willChange: "transform, opacity",
   },
   scrollRodTopClosing: {
     animation: ANIM_CLOSE_ROD_TOP,
+    willChange: "transform, opacity",
   },
   scrollRodBottom: {
     position: "absolute",
@@ -519,9 +525,11 @@ const styles: Record<string, CSSProperties> = {
   },
   scrollRodBottomOpening: {
     animation: ANIM_OPEN_ROD_BOTTOM,
+    willChange: "transform, opacity",
   },
   scrollRodBottomClosing: {
     animation: ANIM_CLOSE_ROD_BOTTOM,
+    willChange: "transform, opacity",
   },
   eyebrow: {
     margin: 0,
