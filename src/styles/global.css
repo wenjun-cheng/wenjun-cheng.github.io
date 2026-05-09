@@ -68,23 +68,23 @@ html, body {
 }
 
 @keyframes scrollRodTopOpen {
-  0%   { opacity: 0;    transform: scaleX(0.18); }
-  100% { opacity: 0.92; transform: scaleX(1); }
+  0%   { transform: translateY(var(--rod-offset, 40vh)); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes scrollRodBottomOpen {
-  0%   { opacity: 0;    transform: scaleX(0.18); }
-  100% { opacity: 0.92; transform: scaleX(1); }
+  0%   { transform: translateY(calc(var(--rod-offset, 40vh) * -1)); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes scrollRodTopClose {
-  0%   { opacity: 0.92; transform: scaleX(1); }
-  100% { opacity: 0;    transform: scaleX(0.18); }
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(var(--rod-offset, 40vh)); }
 }
 
 @keyframes scrollRodBottomClose {
-  0%   { opacity: 0.92; transform: scaleX(1); }
-  100% { opacity: 0;    transform: scaleX(0.18); }
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(calc(var(--rod-offset, 40vh) * -1)); }
 }
 
 /* Thin ink scrollbar */

@@ -1,6 +1,7 @@
 import React, {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   type CSSProperties,
@@ -61,6 +62,18 @@ function ScrollPanel({
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [closeFromPanel, closing, onClose]);
+
+  // Compute the rod's center-to-rest distance once per panel so the
+  // rod keyframes can translateY by the right pixel amount.
+  // Rod rests at top:1.1rem with height 0.68rem, so its center sits at
+  // 1.1rem + 0.34rem from the panel edge.
+  useLayoutEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) return;
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const offset = panel.offsetHeight / 2 - (1.1 + 0.34) * rem;
+    panel.style.setProperty("--rod-offset", `${Math.max(offset, 0)}px`);
+  }, []);
 
   return (
     <div
