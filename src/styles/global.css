@@ -15,7 +15,7 @@
   --side-bright: #ffffff;
   --side-muted: #9a9a9a;
 
-  --sidebar-w: 16rem;
+  --sidebar-w: 19rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,7 +60,9 @@ a:hover { text-decoration: underline; }
   align-items: center;
   padding: 2.5rem 0 1.25rem;
   overflow-y: auto;
+  scrollbar-width: none;
 }
+.sidebar::-webkit-scrollbar { display: none; }
 
 .portrait {
   width: 8.5rem;
@@ -81,11 +83,13 @@ a:hover { text-decoration: underline; }
 
 .tagline {
   color: var(--side-muted);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   line-height: 1.5;
-  margin: 0.5rem 1.25rem 0;
+  margin: 0.15rem 1.25rem 0;
   text-align: center;
+  white-space: nowrap;
 }
+h1 + .tagline { margin-top: 0.5rem; }
 
 .site-nav {
   width: 100%;
@@ -170,10 +174,33 @@ h2 {
   flex-wrap: wrap;
 }
 
-.entry h3 {
+.entry h3,
+.entry-title {
   font-size: 1rem;
   font-weight: 650;
 }
+
+/* collapsible research entries */
+details.entry summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-left: 1.15rem;
+}
+details.entry summary::-webkit-details-marker { display: none; }
+details.entry summary::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+details.entry[open] summary::before { transform: rotate(90deg); }
+details.entry summary:hover .entry-title { color: var(--accent); }
+details.entry summary .meta { display: block; }
+details.entry ul { padding-left: 2.35rem; }
 
 .period {
   color: var(--muted);

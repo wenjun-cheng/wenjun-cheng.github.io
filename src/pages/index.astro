@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 
 const identity = {
   name: "Wenjun Cheng",
-  tagline: "Robotics @ University of Michigan · ECE @ Shanghai Jiao Tong University",
+  taglines: ["Robotics @ University of Michigan", "ECE @ Shanghai Jiao Tong University"],
   email: "wjchengx@umich.edu",
   github: "https://github.com/wenjun-cheng",
   location: "Ann Arbor, MI",
@@ -40,8 +40,10 @@ const publications = [
     title:
       "HeRo-Nav: Heterogeneous Multi-Robot Collaboration for Semantic Navigation with Vision Language Models",
     authors: "Siddhant Tandon, <strong>Wenjun Cheng</strong> (co-first author), Junzhe Wu, Yue Hu, Yulun Tian",
-    venue:
+    venues: [
       "RSS 2026 Workshop on Open World Navigation in the Foundation Model Era: Robustness and Failure Recovery (accepted)",
+      "RSS 2026 Workshop on Robot Planning in the Era of Foundation Models (FM4RoboPlan) (accepted)",
+    ],
   },
 ];
 
@@ -160,14 +162,13 @@ const nav = [
     <aside class="sidebar">
       <img class="portrait" src={identity.portrait} alt="Portrait of Wenjun Cheng" width="160" height="160" />
       <h1>{identity.name}</h1>
-      <p class="tagline">{identity.tagline}</p>
+      {identity.taglines.map((t) => <p class="tagline">{t}</p>)}
       <nav class="site-nav">
         {nav.map((n) => <a href={n.href}>{n.label}</a>)}
       </nav>
       <div class="contact">
         <a href={`mailto:${identity.email}`}>{identity.email}</a>
         <a href={identity.github} target="_blank" rel="noopener">GitHub</a>
-        <a href="/rss.xml">RSS</a>
         <span>{identity.location}</span>
       </div>
       <p class="copyright">© {new Date().getFullYear()} Wenjun Cheng</p>
@@ -199,7 +200,7 @@ const nav = [
         <article class="entry">
           <p class="pub-title">{p.title}</p>
           <p class="meta" set:html={p.authors} />
-          <p class="meta venue">{p.venue}</p>
+          {p.venues.map((v) => <p class="meta venue">{v}</p>)}
         </article>
       ))}
     </section>
@@ -207,14 +208,16 @@ const nav = [
     <section id="research">
       <h2>Research Experience</h2>
       {research.map((r) => (
-        <article class="entry">
-          <div class="entry-head">
-            <h3>{r.title}</h3>
-            <span class="period">{r.period}</span>
-          </div>
-          <p class="meta">{r.meta}</p>
+        <details class="entry">
+          <summary>
+            <span class="entry-head">
+              <span class="entry-title">{r.title}</span>
+              <span class="period">{r.period}</span>
+            </span>
+            <span class="meta">{r.meta}</span>
+          </summary>
           <ul>{r.points.map((pt) => <li>{pt}</li>)}</ul>
-        </article>
+        </details>
       ))}
     </section>
 
