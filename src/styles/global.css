@@ -185,13 +185,14 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .entry h3,
 .entry-title {
   font-size: 1rem;
   font-weight: 650;
+  flex: 1;
+  min-width: 0;
 }
 
 /* collapsible research entries */
@@ -258,10 +259,15 @@ details.entry .body { padding-left: 1.15rem; }
   margin-bottom: 0.25rem;
 }
 .entry ul li::before {
-  content: "→";
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--muted);
+  top: 0.38em;
+  width: 0.75em;
+  height: 0.75em;
+  background: var(--accent);
+  -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M5 12h14"/%3E%3Cpath d="M13 6l6 6-6 6"/%3E%3C/svg%3E') no-repeat center / contain;
+  mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M5 12h14"/%3E%3Cpath d="M13 6l6 6-6 6"/%3E%3C/svg%3E') no-repeat center / contain;
 }
 
 .body {
