@@ -229,21 +229,19 @@ details.entry ul { padding-left: 2.35rem; }
   margin-top: 0.3rem;
 }
 
-.plain-list {
-  list-style: none;
-  font-size: 0.95rem;
+.edu {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
 }
-.plain-list li {
-  margin-bottom: 0.6rem;
-  padding-left: 1rem;
-  position: relative;
+.school-logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }
-.plain-list li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: var(--muted);
-}
+.edu-body { flex: 1; min-width: 0; }
 
 .muted { color: var(--muted); }
 

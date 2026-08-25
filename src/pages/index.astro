@@ -17,6 +17,7 @@ const about = [
 
 const education = [
   {
+    logo: "/logos/umich.png",
     school: "University of Michigan",
     degree: "B.S.E. in Robotics · GPA 4.0/4.0",
     period: "08/2025 – 05/2027 (expected)",
@@ -26,6 +27,7 @@ const education = [
     ],
   },
   {
+    logo: "/logos/sjtu.png",
     school: "Shanghai Jiao Tong University",
     degree: "B.S.E. in Electrical and Computer Engineering · GPA 3.65/4.0",
     period: "08/2023 – 08/2027 (expected)",
@@ -39,10 +41,10 @@ const publications = [
   {
     title:
       "HeRo-Nav: Heterogeneous Multi-Robot Collaboration for Semantic Navigation with Vision Language Models",
-    authors: "Siddhant Tandon, <strong>Wenjun Cheng</strong> (co-first author), Junzhe Wu, Yue Hu, Yulun Tian",
+    authors: "Siddhant Tandon*, <strong>Wenjun Cheng*</strong>, Junzhe Wu, Yue Hu, Yulun Tian",
     venues: [
-      "RSS 2026 Workshop on Open World Navigation in the Foundation Model Era: Robustness and Failure Recovery (accepted)",
-      "RSS 2026 Workshop on Robot Planning in the Era of Foundation Models (FM4RoboPlan) (accepted)",
+      "RSS 2026 Workshop on Open World Navigation in the Foundation Model Era: Robustness and Failure Recovery",
+      "RSS 2026 Workshop on Robot Planning in the Era of Foundation Models (FM4RoboPlan)",
     ],
   },
 ];
@@ -140,10 +142,35 @@ const projects = [
 ];
 
 const activities = [
-  "Founding President, SJTU Global College Tennis Association (08/2024 – 08/2025) — founded the college's first tennis club, grew it to 100+ registered members, and coordinated 10+ intra- and inter-institute competitions.",
-  "Campus Concert Performer & Event Organizer, SJTU Student Union — coordinated concert logistics and performed piano and clarinet on stage.",
-  "Campus Ambassador, SJTU Global College — admissions outreach and ongoing Q&A for prospective students.",
-  "Shenzhen X-Institute & Tsien Hsue-shen Elite Class in Mechanics — led two independent STEM projects, receiving the Best Design Award and Most Valuable Research Award; selected as a distinguished \"Zero-One Student\".",
+  {
+    title: "SJTU Global College Tennis Association — Founding President",
+    period: "08/2024 – 08/2025",
+    points: [
+      "Founded the college's first tennis club, drafting official bylaws and hosting committee elections.",
+      "Grew the club to 100+ registered members and coordinated 10+ intra- and inter-institute competitions.",
+    ],
+  },
+  {
+    title: "SJTU Student Union — Concert Performer & Event Organizer",
+    points: [
+      "Coordinated concert arrangements: performer scheduling, onstage sequences, stage lighting and display systems.",
+      "Performed as a piano and clarinet instrumentalist in campus concerts.",
+    ],
+  },
+  {
+    title: "SJTU Global College — Campus Ambassador",
+    points: [
+      "Designed promotional posters and organized on-site recruitment booths at alma mater.",
+      "Provided ongoing online Q&A to assist prospective students.",
+    ],
+  },
+  {
+    title: "Shenzhen X-Institute & Tsien Hsue-shen Elite Class in Mechanics",
+    points: [
+      "Led two independent STEM projects, receiving the Best Design Award and Most Valuable Research Award; selected as a distinguished \"Zero-One Student\".",
+      "Attended academic visits and technical exchanges at national research centers, including the National Center for Protein Science and the National Astronaut Training Center.",
+    ],
+  },
 ];
 
 const nav = [
@@ -183,13 +210,16 @@ const nav = [
     <section id="education">
       <h2>Education</h2>
       {education.map((e) => (
-        <article class="entry">
-          <div class="entry-head">
-            <h3>{e.school}</h3>
-            <span class="period">{e.period}</span>
+        <article class="entry edu">
+          <img class="school-logo" src={e.logo} alt={`${e.school} seal`} width="48" height="48" />
+          <div class="edu-body">
+            <div class="entry-head">
+              <h3>{e.school}</h3>
+              <span class="period">{e.period}</span>
+            </div>
+            <p class="meta">{e.degree}</p>
+            <ul>{e.notes.map((n) => <li>{n}</li>)}</ul>
           </div>
-          <p class="meta">{e.degree}</p>
-          <ul>{e.notes.map((n) => <li>{n}</li>)}</ul>
         </article>
       ))}
     </section>
@@ -222,34 +252,51 @@ const nav = [
     </section>
 
     <section id="experience">
-      <h2>Professional &amp; Teaching Experience</h2>
+      <h2>Experience</h2>
       {experience.map((e) => (
-        <article class="entry">
-          <div class="entry-head">
-            <h3>{e.title}</h3>
-            <span class="period">{e.period}</span>
-          </div>
+        <details class="entry">
+          <summary>
+            <span class="entry-head">
+              <span class="entry-title">{e.title}</span>
+              <span class="period">{e.period}</span>
+            </span>
+          </summary>
           <ul>{e.points.map((pt) => <li>{pt}</li>)}</ul>
-        </article>
+        </details>
       ))}
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       {projects.map((p) => (
-        <article class="entry">
-          <div class="entry-head">
-            <h3>{p.href ? <a href={p.href} target="_blank" rel="noopener">{p.title}</a> : p.title}</h3>
-          </div>
-          <p class="meta">{p.subtitle}</p>
-          <p class="body">{p.body}</p>
-        </article>
+        <details class="entry">
+          <summary>
+            <span class="entry-head">
+              <span class="entry-title">{p.title}</span>
+            </span>
+            <span class="meta">{p.subtitle}</span>
+          </summary>
+          <p class="body">
+            {p.body}
+            {p.href && <> <a href={p.href} target="_blank" rel="noopener">GitHub ↗</a></>}
+          </p>
+        </details>
       ))}
     </section>
 
     <section id="activities">
-      <h2>Leadership &amp; Activities</h2>
-      <ul class="plain-list">{activities.map((a) => <li>{a}</li>)}</ul>
+      <h2>Activities</h2>
+      {activities.map((a) => (
+        <details class="entry">
+          <summary>
+            <span class="entry-head">
+              <span class="entry-title">{a.title}</span>
+              {a.period && <span class="period">{a.period}</span>}
+            </span>
+          </summary>
+          <ul>{a.points.map((pt) => <li>{pt}</li>)}</ul>
+        </details>
+      ))}
     </section>
 
     <footer>
