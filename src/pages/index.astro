@@ -4,9 +4,8 @@ import Base from "../layouts/Base.astro";
 const identity = {
   name: "Wenjun Cheng",
   tagline: "Robotics @ University of Michigan · ECE @ Shanghai Jiao Tong University",
-  email: "wjchengx10@outlook.com",
+  email: "wjchengx@umich.edu",
   github: "https://github.com/wenjun-cheng",
-  resume: "/resume.pdf",
   location: "Ann Arbor, MI",
   portrait: "/portrait.jpg",
 };
@@ -145,13 +144,6 @@ const activities = [
   "Shenzhen X-Institute & Tsien Hsue-shen Elite Class in Mechanics — led two independent STEM projects, receiving the Best Design Award and Most Valuable Research Award; selected as a distinguished \"Zero-One Student\".",
 ];
 
-const skills = [
-  { label: "Programming", items: "C, C++, Python, MATLAB, Verilog" },
-  { label: "Robotics", items: "ROS 2, SLAM, Habitat, Isaac Sim, Probabilistic Robotics" },
-  { label: "Machine Learning", items: "Vision-Language Models, LLM Architectures, PyTorch" },
-  { label: "Tools", items: "Git, Linux, Docker, LaTeX, SolidWorks" },
-];
-
 const nav = [
   { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
@@ -160,7 +152,6 @@ const nav = [
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#activities", label: "Activities" },
-  { href: "#skills", label: "Skills" },
 ];
 ---
 
@@ -176,9 +167,10 @@ const nav = [
       <div class="contact">
         <a href={`mailto:${identity.email}`}>{identity.email}</a>
         <a href={identity.github} target="_blank" rel="noopener">GitHub</a>
-        <a href={identity.resume} target="_blank" rel="noopener">Résumé (PDF)</a>
-        <span class="muted">{identity.location}</span>
+        <a href="/rss.xml">RSS</a>
+        <span>{identity.location}</span>
       </div>
+      <p class="copyright">© {new Date().getFullYear()} Wenjun Cheng</p>
     </aside>
 
     <main class="content">
@@ -257,21 +249,11 @@ const nav = [
       <ul class="plain-list">{activities.map((a) => <li>{a}</li>)}</ul>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="plain-list">
-        {skills.map((s) => (
-          <li><strong>{s.label}:</strong> {s.items}</li>
-        ))}
-      </ul>
-    </section>
-
     <footer>
       <p>
         Beyond research: piano (Grade 8, Royal Academy of Music), clarinet (Level 9, Central
         Conservatory of Music), and tennis.
       </p>
-      <p class="muted">© {new Date().getFullYear()} Wenjun Cheng</p>
     </footer>
     </main>
   </div>
