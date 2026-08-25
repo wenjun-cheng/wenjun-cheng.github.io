@@ -11,7 +11,7 @@ const identity = {
 };
 
 const about = [
-  "I build spatial AI systems for robots. My research focuses on multi-robot systems and vision-and-language navigation (VLN).",
+  "I build spatial AI systems for robots. My research focuses on multi-robot systems and vision-language navigation.",
   "I am currently an undergraduate researcher at the University of Michigan's Scalable Spatial Intelligence (SSI) Lab and the Computational Autonomy and Robotics Laboratory (CURLY).",
 ];
 
@@ -81,11 +81,11 @@ const research = [
     ],
   },
   {
-    title: "Structured Spatial Memory and World Modeling for VLN",
+    title: "Structured Spatial Memory and World Modeling for Vision-Language Navigation",
     meta: "Undergraduate RA · Prof. Maani Ghaffari & Dr. Yue Hu, University of Michigan",
     period: "10/2025 – 02/2026",
     points: [
-      "Helped build a VLM-based long-horizon vision-and-language navigation framework with scene graph construction and structured semantic memory.",
+      "Helped build a VLM-based long-horizon vision-language navigation framework with scene graph construction and structured semantic memory.",
       "Failure-mode analysis showed semantic memory alone cannot resolve multi-view spatial ambiguity, pinpointing weak VLM motion grounding — the inspiration for the self-motion probing project.",
     ],
   },
@@ -113,16 +113,10 @@ const experience = [
   {
     title: "Edan Instruments, Inc. — Algorithm Intern, R&D System Department",
     period: "01/2025",
-    points: [
-      "Prototyped the company's first interactive 3D heart visualization system for ECG diagnostics, mapping diagnostic labels to anatomical regions with customized rendering, highlighting, and annotation; secured management approval for production integration.",
-    ],
   },
   {
     title: "SJTU Global College — Tech TA, ENGR1000J Introduction to Engineering",
     period: "09/2024 – 12/2024",
-    points: [
-      "Mentored ~40 freshman engineers through the full mechatronics design lifecycle with hands-on instruction in C++, SolidWorks, and Arduino; nominated for the Annual Outstanding TA Award.",
-    ],
   },
 ];
 
@@ -290,15 +284,12 @@ const nav = [
     <section id="experience">
       <h2>Experience</h2>
       {experience.map((e) => (
-        <details class="entry">
-          <summary>
-            <span class="entry-head">
-              <span class="entry-title">{e.title}</span>
-              <span class="period">{e.period}</span>
-            </span>
-          </summary>
-          <ul>{e.points.map((pt) => <li>{pt}</li>)}</ul>
-        </details>
+        <div class="entry line-entry">
+          <div class="entry-head">
+            <h3>{e.title}</h3>
+            <span class="period">{e.period}</span>
+          </div>
+        </div>
       ))}
     </section>
 
