@@ -151,29 +151,43 @@ const skills = [
   { label: "Machine Learning", items: "Vision-Language Models, LLM Architectures, PyTorch" },
   { label: "Tools", items: "Git, Linux, Docker, LaTeX, SolidWorks" },
 ];
+
+const nav = [
+  { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
+  { href: "#publication", label: "Publication" },
+  { href: "#research", label: "Research" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#activities", label: "Activities" },
+  { href: "#skills", label: "Skills" },
+];
 ---
 
 <Base>
-  <main class="page">
-    <header class="hero">
-      <div class="hero-text">
-        <h1>{identity.name}</h1>
-        <p class="tagline">{identity.tagline}</p>
-        <nav class="links">
-          <a href={`mailto:${identity.email}`}>{identity.email}</a>
-          <span aria-hidden="true">·</span>
-          <a href={identity.github} target="_blank" rel="noopener">GitHub</a>
-          <span aria-hidden="true">·</span>
-          <a href={identity.resume} target="_blank" rel="noopener">Résumé (PDF)</a>
-          <span aria-hidden="true">·</span>
-          <span class="muted">{identity.location}</span>
-        </nav>
-        {about.map((p) => <p class="about">{p}</p>)}
-      </div>
+  <div class="layout">
+    <aside class="sidebar">
       <img class="portrait" src={identity.portrait} alt="Portrait of Wenjun Cheng" width="160" height="160" />
-    </header>
+      <h1>{identity.name}</h1>
+      <p class="tagline">{identity.tagline}</p>
+      <nav class="site-nav">
+        {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+      </nav>
+      <div class="contact">
+        <a href={`mailto:${identity.email}`}>{identity.email}</a>
+        <a href={identity.github} target="_blank" rel="noopener">GitHub</a>
+        <a href={identity.resume} target="_blank" rel="noopener">Résumé (PDF)</a>
+        <span class="muted">{identity.location}</span>
+      </div>
+    </aside>
 
-    <section>
+    <main class="content">
+    <section id="about">
+      <h2>About</h2>
+      {about.map((p) => <p class="about">{p}</p>)}
+    </section>
+
+    <section id="education">
       <h2>Education</h2>
       {education.map((e) => (
         <article class="entry">
@@ -187,7 +201,7 @@ const skills = [
       ))}
     </section>
 
-    <section>
+    <section id="publication">
       <h2>Publication</h2>
       {publications.map((p) => (
         <article class="entry">
@@ -198,7 +212,7 @@ const skills = [
       ))}
     </section>
 
-    <section>
+    <section id="research">
       <h2>Research Experience</h2>
       {research.map((r) => (
         <article class="entry">
@@ -212,7 +226,7 @@ const skills = [
       ))}
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Professional &amp; Teaching Experience</h2>
       {experience.map((e) => (
         <article class="entry">
@@ -225,7 +239,7 @@ const skills = [
       ))}
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       {projects.map((p) => (
         <article class="entry">
@@ -238,12 +252,12 @@ const skills = [
       ))}
     </section>
 
-    <section>
+    <section id="activities">
       <h2>Leadership &amp; Activities</h2>
       <ul class="plain-list">{activities.map((a) => <li>{a}</li>)}</ul>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <ul class="plain-list">
         {skills.map((s) => (
@@ -259,5 +273,6 @@ const skills = [
       </p>
       <p class="muted">© {new Date().getFullYear()} Wenjun Cheng</p>
     </footer>
-  </main>
+    </main>
+  </div>
 </Base>
