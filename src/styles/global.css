@@ -252,7 +252,17 @@ details.entry .body { padding-left: 1.15rem; }
   list-style: none;
   font-size: 0.95rem;
 }
-.entry ul li { margin-bottom: 0.35rem; }
+.entry ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+.entry ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
 
 .line-entry { margin-bottom: 0.6rem; }
 
