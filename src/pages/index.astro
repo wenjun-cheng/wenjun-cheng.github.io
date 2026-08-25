@@ -113,10 +113,16 @@ const experience = [
   {
     title: "Edan Instruments, Inc. — Algorithm Intern, R&D System Department",
     period: "01/2025",
+    points: [
+      "Prototyped the company's first interactive 3D heart visualization system for ECG diagnostics, mapping diagnostic labels to anatomical regions with customized rendering, highlighting, and annotation; secured management approval for production integration.",
+    ],
   },
   {
     title: "SJTU Global College — Tech TA, ENGR1000J Introduction to Engineering",
     period: "09/2024 – 12/2024",
+    points: [
+      "Mentored ~40 freshman engineers through the full mechatronics design lifecycle with hands-on instruction in C++, SolidWorks, and Arduino; nominated for the Annual Outstanding TA Award.",
+    ],
   },
 ];
 
@@ -284,12 +290,15 @@ const nav = [
     <section id="experience">
       <h2>Experience</h2>
       {experience.map((e) => (
-        <div class="entry line-entry">
-          <div class="entry-head">
-            <h3>{e.title}</h3>
-            <span class="period">{e.period}</span>
-          </div>
-        </div>
+        <details class="entry">
+          <summary>
+            <span class="entry-head">
+              <span class="entry-title">{e.title}</span>
+              <span class="period">{e.period}</span>
+            </span>
+          </summary>
+          <ul>{e.points.map((pt) => <li>{pt}</li>)}</ul>
+        </details>
       ))}
     </section>
 
