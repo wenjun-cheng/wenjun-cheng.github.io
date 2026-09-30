@@ -10,8 +10,8 @@ const identity = {
 };
 
 const bio = [
-  "I study what spatial structure embodied foundation models build internally, why it often fails to support action, and how memory can persist over long horizons and across agents.",
-  "I am a senior in Robotics at the University of Michigan, in a dual degree with Shanghai Jiao Tong University. I work with Prof. Yulun Tian, Prof. Maani Ghaffari, Dr. Yue Hu, and Prof. Vasileios Tzoumas in the SSI Lab and CURLY. I am applying to PhD programs for Fall 2027.",
+  "I work on spatial intelligence for embodied agents: how foundation models represent space, why that representation often fails to guide action, and how it can scale to large environments, long horizons, and multi-robot teams.",
+  "I am a senior in Robotics at the University of Michigan, working with Prof. Yulun Tian, Prof. Maani Ghaffari, Dr. Yue Hu, and Prof. Vasileios Tzoumas in the SSI Lab and CURLY. I am applying to graduate programs for Fall 2027.",
 ];
 
 const interests = [
@@ -194,15 +194,20 @@ const updated = "September 2026";
     </header>
 
     <section>
-      <h2>Publication</h2>
-      {publications.map((p) => (
-        <article class="pub">
-          <p class="pub-title">{p.title}</p>
-          <p class="meta" set:html={p.authors} />
-          <p class="meta venue">{p.venue}</p>
+      <h2>Education</h2>
+      {education.map((e) => (
+        <article class="school">
+          <img src={e.logo} alt="" width="44" height="44" />
+          <div>
+            <div class="row">
+              <h3>{e.school}</h3>
+              <span class="when">{e.period}</span>
+            </div>
+            <p class="meta">{e.degree}</p>
+            {e.notes.map((n) => <p class="small">{n}</p>)}
+          </div>
         </article>
       ))}
-      <p class="note">* equal contribution · † corresponding author</p>
     </section>
 
     <section>
@@ -222,20 +227,15 @@ const updated = "September 2026";
     </section>
 
     <section>
-      <h2>Education</h2>
-      {education.map((e) => (
-        <article class="school">
-          <img src={e.logo} alt="" width="44" height="44" />
-          <div>
-            <div class="row">
-              <h3>{e.school}</h3>
-              <span class="when">{e.period}</span>
-            </div>
-            <p class="meta">{e.degree}</p>
-            {e.notes.map((n) => <p class="small">{n}</p>)}
-          </div>
+      <h2>Publication</h2>
+      {publications.map((p) => (
+        <article class="pub">
+          <p class="pub-title">{p.title}</p>
+          <p class="meta" set:html={p.authors} />
+          <p class="meta venue">{p.venue}</p>
         </article>
       ))}
+      <p class="note">* equal contribution · † corresponding author</p>
     </section>
 
     <section>
