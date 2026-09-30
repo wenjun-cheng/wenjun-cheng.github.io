@@ -162,12 +162,12 @@ h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
 /* education */
 .school {
   display: grid;
-  grid-template-columns: 2.75rem 1fr;
-  gap: 1rem;
+  grid-template-columns: 3.75rem 1fr;
+  gap: 1.1rem;
   align-items: start;
 }
 .school + .school { margin-top: 1.2rem; }
-.school img { width: 2.75rem; height: 2.75rem; object-fit: contain; }
+.school img { width: 3.75rem; height: 3.75rem; object-fit: contain; }
 .row {
   display: flex;
   flex-wrap: wrap;
