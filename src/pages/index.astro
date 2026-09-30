@@ -3,16 +3,85 @@ import Base from "../layouts/Base.astro";
 
 const identity = {
   name: "Wenjun Cheng",
-  taglines: ["Robotics @ University of Michigan", "ECE @ Shanghai Jiao Tong University"],
   email: "wjchengx@umich.edu",
   github: "https://github.com/wenjun-cheng",
-  location: "Ann Arbor, MI",
+  cv: "/resume.pdf",
   portrait: "/portrait.jpg",
 };
 
-const about = [
-  "I build spatial AI systems for robots. My research focuses on multi-robot systems and vision-language navigation.",
-  "I am currently an undergraduate researcher at the University of Michigan's Scalable Spatial Intelligence (SSI) Lab and the Computational Autonomy and Robotics Laboratory (CURLY).",
+const bio = [
+  "I study what spatial structure embodied foundation models build internally, why it often fails to support action, and how memory can persist over long horizons and across agents.",
+  "I am a senior in Robotics at the University of Michigan, in a dual degree with Shanghai Jiao Tong University. I work with Prof. Yulun Tian, Prof. Maani Ghaffari, Dr. Yue Hu, and Prof. Vasileios Tzoumas in the SSI Lab and CURLY. I am applying to PhD programs for Fall 2027.",
+];
+
+const interests = [
+  "Spatial Intelligence",
+  "Embodied Foundation Models",
+  "Long-Horizon Memory",
+  "Multi-Agent Systems",
+  "Interpretability",
+];
+
+const publications = [
+  {
+    title:
+      "HeRo-Nav: Heterogeneous Multi-Robot Collaboration for Semantic Navigation with Vision Language Models",
+    authors: "Siddhant Tandon*, <strong>Wenjun Cheng*</strong>, Junzhe Wu, Yue Hu†, Yulun Tian†",
+    venue:
+      "RSS 2026 Workshops: Open World Navigation in the Foundation Model Era; Robot Planning in the Era of Foundation Models",
+  },
+];
+
+const research = [
+  {
+    title: "Heterogeneous Multi-Robot Collaboration with Vision-Language Models",
+    role: "Co-first author",
+    advisors: "Prof. Yulun Tian, Dr. Yue Hu",
+    period: "02/2026 – now",
+    points: [
+      "Built a system for heterogeneous multi-robot search in self-built Isaac Sim disaster scenes, in which a zero-shot VLM coordinator reasons over each robot's camera height, speed, and terrain-dependent motion cost to assign tasks from a shared spatial map fused across the team. Accepted to two RSS 2026 workshops.",
+      "Extending the project into a benchmark of interdependent long-horizon missions, such as a humanoid opening a door to retrieve a medical kit and loading it onto a quadruped that delivers it through rough terrain. Built its embodiment layer with GEAR-SONIC on the Unitree G1 and an Extreme Parkour policy adapted to the Go2 with a redesigned terrain curriculum.",
+      "Building an agentic baseline in which each robot's VLM agent acts through tool calls, maintains a spatio-temporal memory, and coordinates via a captain-led planning protocol.",
+    ],
+  },
+  {
+    title: "Probing and Training Ego-Motion Understanding in Navigation-Trained VLMs",
+    role: "Project lead",
+    advisors: "Prof. Yulun Tian, Dr. Yue Hu",
+    period: "01/2026 – now",
+    points: [
+      "Asked whether navigation training teaches VLMs to estimate their own motion, comparing Qwen3-VL before and after navigation fine-tuning (LongNav-R1) with SE(3) motion probes on a controlled dataset of single-motion image pairs.",
+      "Found that training sharpens the internal ego-motion estimate, even for motions the policy never takes, yet the model's answer never improves, and traced the estimate to cross-view attention. Now testing the reverse direction, whether ego-motion supervision improves navigation.",
+    ],
+  },
+  {
+    title: "Task-Conditioned Active Semantic Information Acquisition",
+    role: "Research assistant",
+    advisors: "Prof. Yulun Tian, Prof. Vasileios Tzoumas",
+    period: "06/2026 – now",
+    points: [
+      "Leading the Unreal Engine simulation for a task-conditioned active perception framework, in which robots gather observations to resolve semantic hypotheses by propagating uncertainty from an object-level map belief, starting with a single robot and extending to multi-robot teams.",
+    ],
+  },
+  {
+    title: "Structured Spatial Memory for Vision-and-Language Navigation",
+    role: "Research assistant",
+    advisors: "Prof. Maani Ghaffari, Dr. Yue Hu",
+    period: "10/2025 – 02/2026",
+    points: [
+      "Evaluated scene graphs and semantic memory for VLM agents in long-horizon VLN, finding that memory alone cannot resolve multi-view ambiguity and tracing the failure to weak VLM motion grounding, which motivated the ego-motion probing project.",
+    ],
+  },
+  {
+    title: "Multimodal Experimental Platform for Fluid–Structure Impact Analysis",
+    role: "Project lead, Shanghai Jiao Tong University",
+    advisors: "Prof. David L.S. Hung",
+    period: "04/2024 – 08/2025",
+    points: [
+      "Designed a liquid-impact platform with vibration isolation and tunable impact speed, angle, droplet size, and liquid type.",
+      "Built a synchronized multimodal acquisition pipeline coupling piezoelectric force sensing, high-speed imaging, and an infrared trigger circuit, with FFT-based analysis that separates impact signals from structural noise.",
+    ],
+  },
 ];
 
 const education = [
@@ -20,327 +89,197 @@ const education = [
     logo: "/logos/umich.png",
     school: "University of Michigan",
     degree: "B.S.E. in Robotics · GPA 4.0/4.0",
-    period: "08/2025 – 05/2027 (expected)",
+    period: "08/2025 – 05/2027",
     notes: [
-      "Graduate coursework: Foundation of Language Models (A), Mobile Robotics (A+), Multi-Robot Systems (A), Self-Driving Cars (Fall 2026)",
+      "Graduate coursework: Foundation of Language Models (A), Mobile Robotics (A+), Multi-Robot Systems (A), Self-Driving Cars (in progress)",
       "University Honors · Dean's List · Michigan Engineering Continuing Student Scholarship",
     ],
   },
   {
     logo: "/logos/sjtu.png",
     school: "Shanghai Jiao Tong University",
-    degree: "B.S.E. in Electrical and Computer Engineering · GPA 3.65/4.0",
-    period: "08/2023 – 08/2027 (expected)",
-    notes: [
-      "Huatai Securities Technology Scholarship · Yu Liming Scholarship · Outstanding Undergraduate Scholarship",
-    ],
-  },
-];
-
-const publications = [
-  {
-    title:
-      "HeRo-Nav: Heterogeneous Multi-Robot Collaboration for Semantic Navigation with Vision Language Models",
-    authors: "Siddhant Tandon*, <strong>Wenjun Cheng*</strong>, Junzhe Wu, Yue Hu, Yulun Tian",
-    venues: [
-      "RSS 2026 Workshop on Open World Navigation in the Foundation Model Era: Robustness and Failure Recovery",
-      "RSS 2026 Workshop on Robot Planning in the Era of Foundation Models",
-    ],
-  },
-];
-
-const research = [
-  {
-    title: "Uncertainty-Aware Decentralized Multi-Robot Object Search",
-    meta: "Undergraduate RA · Prof. Yulun Tian & Prof. Vasileios Tzoumas, University of Michigan",
-    period: "06/2026 – Present",
-    points: [
-      "Leading construction of simulation environments and evaluation scenarios for decentralized multi-robot exploration with heterogeneous robot teams.",
-      "Refactoring HeRo-Nav navigation modules (RGB-D occupancy mapping, frontier extraction, local planning) into a decentralized architecture with pose, task, frontier, and compact semantic message exchange.",
-      "Benchmarking against centralized and communication-free baselines (ongoing).",
-    ],
-  },
-  {
-    title: "HeRo-Nav: Heterogeneous Multi-Robot Semantic Navigation with VLMs",
-    meta: "Undergraduate RA & co-first author · Prof. Yulun Tian & Dr. Yue Hu, University of Michigan",
-    period: "02/2026 – Present",
-    points: [
-      "Zero-shot semantic navigation framework coordinating a quadruped, a humanoid, and a drone in NVIDIA Isaac Sim disaster-response environments.",
-      "Co-developed RGB-D to bird's-eye-view mapping (per-class occupancy maps, map fusion, persistent frontier identification) and the VLM coordinator's multimodal prompt and structured output interface.",
-      "Achieved a 93.3% success rate (vs. 86.7% for the top classic baseline) and reduced team hazard exposure from 40.1% to 25.7%; accepted at two RSS workshops, extending the benchmark for ICRA.",
-    ],
-  },
-  {
-    title: "Probing Self-Motion Grounding in Vision-Language Models",
-    meta: "Undergraduate RA & project lead · Prof. Yulun Tian & Dr. Yue Hu, University of Michigan",
-    period: "01/2026 – Present",
-    points: [
-      "Designed an experimental paradigm to analyze how VLMs encode camera self-motion and how navigation post-training reshapes spatial representations.",
-      "Built an Isaac Sim pipeline for a controlled inverse-dynamics dataset with scene-held-out evaluation, and a single-pass pipeline extracting hidden representations across Qwen3-VL's vision encoder and language model.",
-      "Probing representations via semantic motion classification, Lie-algebra continuous regression, and decision analysis with careful confound controls; comparing base, SFT, and RL-navigated variants (ongoing).",
-    ],
-  },
-  {
-    title: "Structured Spatial Memory and World Modeling for Vision-Language Navigation",
-    meta: "Undergraduate RA · Prof. Maani Ghaffari & Dr. Yue Hu, University of Michigan",
-    period: "10/2025 – 02/2026",
-    points: [
-      "Helped build a VLM-based long-horizon vision-language navigation framework with scene graph construction and structured semantic memory.",
-      "Failure-mode analysis showed semantic memory alone cannot resolve multi-view spatial ambiguity, pinpointing weak VLM motion grounding — the inspiration for the self-motion probing project.",
-    ],
-  },
-  {
-    title: "Multimodal Platform for Liquid-Impact and Fluid–Structure Interaction",
-    meta: "Undergraduate RA & project leader · Prof. David L.S. Hung, Shanghai Jiao Tong University",
-    period: "04/2024 – 08/2025",
-    points: [
-      "Led the design and iterative optimization of a modular liquid-impact experimental platform, adopted by the lab as standard infrastructure.",
-      "Built a synchronized multimodal acquisition pipeline combining piezoelectric force sensing and high-speed imaging via an infrared triggering circuit; separated genuine impact signals from structural vibration through FFT-based analysis.",
-    ],
-  },
-  {
-    title: "Edge-Aware Active Perception and Exploration Planning for UAVs",
-    meta: "Research Intern · Tsinghua University Shenzhen International Graduate School",
-    period: "12/2023 – 02/2024",
-    points: [
-      "Analyzed bottlenecks of edge-deployed active perception and assisted in developing a hybrid exploration algorithm balancing exploration efficacy and computational cost.",
-      "Supported sim-to-real transfer and validation on physical UAV platforms.",
-    ],
+    degree: "B.S.E. in Electrical and Computer Engineering",
+    period: "08/2023 – 08/2027",
+    notes: ["Huatai Securities Technology Scholarship · Yu Liming Scholarship · Outstanding Undergraduate Scholarship"],
   },
 ];
 
 const experience = [
   {
-    title: "Edan Instruments, Inc. — Algorithm Intern, R&D System Department",
+    org: "Edan Instruments, Inc.",
+    role: "Algorithm Intern, R&D System Department",
     period: "01/2025",
-    points: [
-      "Prototyped the company's first interactive 3D heart visualization system for ECG diagnostics, mapping diagnostic labels to anatomical regions with customized rendering, highlighting, and annotation; secured management approval for production integration.",
-    ],
+    text: "Prototyped the company's first interactive 3D heart visualization for ECG diagnoses, mapping diagnostic labels to cardiac regions on an adapted Blender model. Approved for production integration.",
   },
   {
-    title: "SJTU Global College — Tech TA, ENGR1000J Introduction to Engineering",
+    org: "SJTU Global College",
+    role: "Teaching Assistant, ENGR1000J Introduction to Engineering",
     period: "09/2024 – 12/2024",
-    points: [
-      "Mentored ~40 freshman engineers through the full mechatronics design lifecycle with hands-on instruction in C++, SolidWorks, and Arduino; nominated for the Annual Outstanding TA Award.",
-    ],
+    text: "Co-designed a track race challenge for ultrasonic-guided robotic cars and mentored about 40 freshmen through it and a follow-up open-ended build, teaching C++, SolidWorks, and Arduino. Nominated for the Annual Outstanding TA Award.",
+  },
+  {
+    org: "SJTU Global College Tennis Association",
+    role: "Founding President",
+    period: "08/2024 – 08/2025",
+    text: "Founded the institute's tennis club, growing it to 100+ members and organizing 10+ intra- and inter-institute competitions.",
   },
 ];
 
 const projects = [
   {
     title: "RACCOON",
-    subtitle: "Independent project",
-    body: "Research-as-code: search, take notes, and conduct deep analysis in the IDE, organizing information as files.",
+    text: "Research as code: an AI coding agent searches literature, takes notes, and writes reports as files in the same repo as the project.",
     href: "https://github.com/wenjun-cheng/RACCOON",
   },
   {
     title: "TEG-SLAM",
-    subtitle: "Course project · University of Michigan",
-    body: "Temporal Evidence Guided monocular Gaussian SLAM with memory-aware uncertainty filtering for robust tracking in dynamic scenes.",
+    text: "Monocular Gaussian SLAM with temporal evidence and memory-aware uncertainty filtering for dynamic scenes (course project, ROB 530).",
     href: "https://github.com/chloeqxq/Rob530-Group20-TEG-SLAM",
   },
 ];
 
-const activities = [
+// 24x24 stroke icons
+const hobbies = [
   {
-    title: "SJTU Global College Tennis Association — Founding President",
-    period: "08/2024 – 08/2025",
-    points: [
-      "Founded the college's first tennis club, drafting official bylaws and hosting committee elections.",
-      "Grew the club to 100+ registered members and coordinated 10+ intra- and inter-institute competitions.",
-    ],
+    name: "Piano",
+    detail: "Grade 8, Royal Academy of Music",
+    icon: '<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M8 4v16M13 4v16M18 4v16"/><path d="M6.5 4v8M11.5 4v8M16 4v8" stroke-width="3"/>',
   },
   {
-    title: "SJTU Student Union — Concert Performer & Event Organizer",
-    points: [
-      "Coordinated concert arrangements: performer scheduling, onstage sequences, stage lighting and display systems.",
-      "Performed as a piano and clarinet instrumentalist in campus concerts.",
-    ],
+    name: "Clarinet",
+    detail: "Level 9, Central Conservatory of Music",
+    icon: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
   },
   {
-    title: "SJTU Global College — Campus Ambassador",
-    points: [
-      "Designed promotional posters and organized on-site recruitment booths at alma mater.",
-      "Provided ongoing online Q&A to assist prospective students.",
-    ],
+    name: "Tennis",
+    detail: "Founding president of a 100+ member club",
+    icon: '<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6a9 9 0 0 1 0 12.8M18.4 5.6a9 9 0 0 0 0 12.8"/>',
   },
   {
-    title: "Shenzhen X-Institute & Tsien Hsue-shen Elite Class in Mechanics",
-    points: [
-      "Led two independent STEM projects, receiving the Best Design Award and Most Valuable Research Award; selected as a distinguished \"Zero-One Student\".",
-      "Attended academic visits and technical exchanges at national research centers, including the National Center for Protein Science and the National Astronaut Training Center.",
-    ],
+    name: "Soccer",
+    detail: "",
+    icon: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.3 2.4-1.3 3.9h-4l-1.3-3.9z"/><path d="M12 3v4.5M15.3 9.9l4.6-1.5M14 13.8l2.8 3.9M10 13.8l-2.8 3.9M8.7 9.9L4.1 8.4"/>',
   },
 ];
 
-// 24x24 stroke icon paths (feather/lucide style)
-const nav = [
-  {
-    href: "#about",
-    label: "About",
-    icon: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
-  },
-  {
-    href: "#education",
-    label: "Education",
-    icon: '<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1.5 2.5 3 6 3s6-1.5 6-3v-4.5"/>',
-  },
-  {
-    href: "#publication",
-    label: "Publication",
-    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
-  },
-  {
-    href: "#research",
-    label: "Research",
-    icon: '<path d="M10 2v6.3L4.2 19a1.5 1.5 0 0 0 1.3 2.2h13a1.5 1.5 0 0 0 1.3-2.2L14 8.3V2"/><line x1="8" y1="2" x2="16" y2="2"/><line x1="7" y1="15" x2="17" y2="15"/>',
-  },
-  {
-    href: "#experience",
-    label: "Experience",
-    icon: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>',
-  },
-  {
-    href: "#projects",
-    label: "Projects",
-    icon: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
-  },
-  {
-    href: "#activities",
-    label: "Activities",
-    icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
-  },
+const links = [
+  { label: identity.email, href: `mailto:${identity.email}`, icon: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>' },
+  { label: "CV", href: identity.cv, icon: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>' },
+  { label: "GitHub", href: identity.github, icon: '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>' },
 ];
+
+const updated = "September 2026";
 ---
 
 <Base>
-  <div class="layout">
-    <aside class="sidebar">
-      <img class="portrait" src={identity.portrait} alt="Portrait of Wenjun Cheng" width="160" height="160" />
-      <h1>{identity.name}</h1>
-      {identity.taglines.map((t) => <p class="tagline">{t}</p>)}
-      <nav class="site-nav">
-        {nav.map((n) => (
-          <a href={n.href}>
-            <svg viewBox="0 0 24 24" aria-hidden="true" set:html={n.icon} />
-            {n.label}
-          </a>
-        ))}
-      </nav>
-      <div class="contact">
-        <a href={`mailto:${identity.email}`}>{identity.email}</a>
-        <a href={identity.github} target="_blank" rel="noopener">GitHub</a>
-        <span>{identity.location}</span>
+  <main class="page">
+    <header class="hero">
+      <img class="portrait" src={identity.portrait} alt="Portrait of Wenjun Cheng" width="144" height="144" />
+      <div class="hero-text">
+        <h1>{identity.name}</h1>
+        <p class="affil">Robotics, University of Michigan · ECE, Shanghai Jiao Tong University</p>
+        {bio.map((p) => <p class="bio">{p}</p>)}
+        <ul class="tags" aria-label="Research interests">
+          {interests.map((t) => <li>{t}</li>)}
+        </ul>
+        <nav class="links" aria-label="Contact and profiles">
+          {links.map((l) => (
+            <a href={l.href} target={l.href.startsWith("http") ? "_blank" : undefined} rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" set:html={l.icon} />
+              {l.label}
+            </a>
+          ))}
+        </nav>
       </div>
-      <p class="copyright">© {new Date().getFullYear()} Wenjun Cheng</p>
-    </aside>
+    </header>
 
-    <main class="content">
-    <section id="about">
-      <h2>About</h2>
-      {about.map((p) => <p class="about">{p}</p>)}
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      {education.map((e) => (
-        <details class="entry edu">
-          <summary>
-            <img class="school-logo" src={e.logo} alt={`${e.school} seal`} width="48" height="48" />
-            <span class="edu-body">
-              <span class="entry-head">
-                <span class="entry-title">{e.school}</span>
-                <span class="period">{e.period}</span>
-              </span>
-              <span class="meta">{e.degree}</span>
-            </span>
-          </summary>
-          <ul>{e.notes.map((n) => <li>{n}</li>)}</ul>
-        </details>
-      ))}
-    </section>
-
-    <section id="publication">
+    <section>
       <h2>Publication</h2>
       {publications.map((p) => (
-        <article class="entry">
+        <article class="pub">
           <p class="pub-title">{p.title}</p>
           <p class="meta" set:html={p.authors} />
-          {p.venues.map((v) => <p class="meta venue">{v}</p>)}
+          <p class="meta venue">{p.venue}</p>
+        </article>
+      ))}
+      <p class="note">* equal contribution · † corresponding author</p>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <div class="timeline">
+        {research.map((r) => (
+          <article class="item">
+            <p class="when">{r.period}</p>
+            <div>
+              <h3>{r.title}</h3>
+              <p class="meta">{r.role} · Advisors: {r.advisors}</p>
+              <ul>{r.points.map((pt) => <li>{pt}</li>)}</ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      {education.map((e) => (
+        <article class="school">
+          <img src={e.logo} alt="" width="44" height="44" />
+          <div>
+            <div class="row">
+              <h3>{e.school}</h3>
+              <span class="when">{e.period}</span>
+            </div>
+            <p class="meta">{e.degree}</p>
+            {e.notes.map((n) => <p class="small">{n}</p>)}
+          </div>
         </article>
       ))}
     </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      {research.map((r) => (
-        <details class="entry">
-          <summary>
-            <span class="entry-head">
-              <span class="entry-title">{r.title}</span>
-              <span class="period">{r.period}</span>
-            </span>
-            <span class="meta">{r.meta}</span>
-          </summary>
-          <ul>{r.points.map((pt) => <li>{pt}</li>)}</ul>
-        </details>
-      ))}
-    </section>
-
-    <section id="experience">
+    <section>
       <h2>Experience</h2>
-      {experience.map((e) => (
-        <details class="entry">
-          <summary>
-            <span class="entry-head">
-              <span class="entry-title">{e.title}</span>
-              <span class="period">{e.period}</span>
-            </span>
-          </summary>
-          <ul>{e.points.map((pt) => <li>{pt}</li>)}</ul>
-        </details>
-      ))}
+      <div class="timeline">
+        {experience.map((x) => (
+          <article class="item">
+            <p class="when">{x.period}</p>
+            <div>
+              <h3>{x.org}</h3>
+              <p class="meta">{x.role}</p>
+              <p class="small">{x.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      {projects.map((p) => (
-        <details class="entry">
-          <summary>
-            <span class="entry-head">
-              <span class="entry-title">{p.title}</span>
-            </span>
-            <span class="meta">{p.subtitle}</span>
-          </summary>
-          <p class="body">
-            {p.body}
-            {p.href && <> <a href={p.href} target="_blank" rel="noopener">GitHub ↗</a></>}
-          </p>
-        </details>
-      ))}
+    <section>
+      <h2>Other Projects</h2>
+      <div class="projects">
+        {projects.map((p) => (
+          <a class="project" href={p.href} target="_blank" rel="noopener">
+            <h3>{p.title} <span aria-hidden="true">↗</span></h3>
+            <p class="small">{p.text}</p>
+          </a>
+        ))}
+      </div>
     </section>
 
-    <section id="activities">
-      <h2>Activities</h2>
-      {activities.map((a) => (
-        <details class="entry">
-          <summary>
-            <span class="entry-head">
-              <span class="entry-title">{a.title}</span>
-              {a.period && <span class="period">{a.period}</span>}
-            </span>
-          </summary>
-          <ul>{a.points.map((pt) => <li>{pt}</li>)}</ul>
-        </details>
-      ))}
+    <section>
+      <h2>Beyond Research</h2>
+      <ul class="hobbies">
+        {hobbies.map((h) => (
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" set:html={h.icon} />
+            <span><strong>{h.name}</strong>{h.detail && <span class="small">{h.detail}</span>}</span>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <footer>
-      <p>
-        Beyond research: piano (Grade 8, Royal Academy of Music), clarinet (Level 9, Central
-        Conservatory of Music), and tennis.
-      </p>
+      <p>© {new Date().getFullYear()} Wenjun Cheng · Last updated {updated}</p>
     </footer>
-    </main>
-  </div>
+  </main>
 </Base>
