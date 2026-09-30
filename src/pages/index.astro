@@ -5,12 +5,10 @@ const identity = {
   name: "Wenjun Cheng",
   email: "wjchengx@umich.edu",
   github: "https://github.com/wenjun-cheng",
-  cv: "/resume.pdf",
   portrait: "/portrait.jpg",
 };
 
 const bio = [
-  "I work on spatial intelligence for embodied agents: how foundation models represent space, why that representation often fails to guide action, and how it can scale to large environments, long horizons, and multi-robot teams.",
   "I am a senior in Robotics at the University of Michigan, working with Prof. Yulun Tian, Prof. Maani Ghaffari, Dr. Yue Hu, and Prof. Vasileios Tzoumas in the SSI Lab and CURLY. I am applying to graduate programs for Fall 2027.",
 ];
 
@@ -125,19 +123,6 @@ const experience = [
   },
 ];
 
-const projects = [
-  {
-    title: "RACCOON",
-    text: "Research as code: an AI coding agent searches literature, takes notes, and writes reports as files in the same repo as the project.",
-    href: "https://github.com/wenjun-cheng/RACCOON",
-  },
-  {
-    title: "TEG-SLAM",
-    text: "Monocular Gaussian SLAM with temporal evidence and memory-aware uncertainty filtering for dynamic scenes (course project, ROB 530).",
-    href: "https://github.com/chloeqxq/Rob530-Group20-TEG-SLAM",
-  },
-];
-
 // 24x24 stroke icons
 const hobbies = [
   {
@@ -164,7 +149,6 @@ const hobbies = [
 
 const links = [
   { label: identity.email, href: `mailto:${identity.email}`, icon: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>' },
-  { label: "CV", href: identity.cv, icon: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>' },
   { label: "GitHub", href: identity.github, icon: '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>' },
 ];
 
@@ -177,7 +161,6 @@ const updated = "September 2026";
       <img class="portrait" src={identity.portrait} alt="Portrait of Wenjun Cheng" width="144" height="144" />
       <div class="hero-text">
         <h1>{identity.name}</h1>
-        <p class="affil">Robotics, University of Michigan · ECE, Shanghai Jiao Tong University</p>
         {bio.map((p) => <p class="bio">{p}</p>)}
         <ul class="tags" aria-label="Research interests">
           {interests.map((t) => <li>{t}</li>)}
@@ -250,18 +233,6 @@ const updated = "September 2026";
               <p class="small">{x.text}</p>
             </div>
           </article>
-        ))}
-      </div>
-    </section>
-
-    <section>
-      <h2>Other Projects</h2>
-      <div class="projects">
-        {projects.map((p) => (
-          <a class="project" href={p.href} target="_blank" rel="noopener">
-            <h3>{p.title} <span aria-hidden="true">↗</span></h3>
-            <p class="small">{p.text}</p>
-          </a>
         ))}
       </div>
     </section>
